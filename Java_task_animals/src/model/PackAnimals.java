@@ -1,3 +1,5 @@
+package src.model;
+
 public class PackAnimals extends Animals {
     private String workType;
 

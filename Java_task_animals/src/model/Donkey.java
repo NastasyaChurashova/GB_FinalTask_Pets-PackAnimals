@@ -1,4 +1,6 @@
-public class Camel extends PackAnimals {
+package src.model;
+
+public class Donkey extends PackAnimals {
     protected String state = "protected";
 
     public void transportWeight() {

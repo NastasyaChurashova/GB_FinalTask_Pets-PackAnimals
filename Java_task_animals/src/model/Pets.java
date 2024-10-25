@@ -1,3 +1,5 @@
+package src.model;
+
 public class Pets extends Animals {
     private int quantity;
 
