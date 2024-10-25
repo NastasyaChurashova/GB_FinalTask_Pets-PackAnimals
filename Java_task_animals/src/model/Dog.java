@@ -1,3 +1,5 @@
+package src.model;
+
 public class Dog extends Pets {
     protected String state = "protected";
 

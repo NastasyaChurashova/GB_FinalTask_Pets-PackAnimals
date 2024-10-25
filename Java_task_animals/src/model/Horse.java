@@ -1,3 +1,5 @@
+package src.model;
+
 public class Horse extends PackAnimals {
     protected String state = "protected";
 
