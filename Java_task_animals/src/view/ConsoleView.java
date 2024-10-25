@@ -14,7 +14,10 @@ public class ConsoleView {
         System.out.println("2. Show commands of an animal");
         System.out.println("3. Train animal new command");
         System.out.println("4. List animals by birthdate");
-        System.out.println("5. Exit");
+        System.out.println("5. Show Total Pets Count");
+        System.out.println("6. Show Total Pack Animals Count");
+        System.out.println("7. Show Total Animals Count");
+        System.out.println("8. Exit");
         System.out.print("Choose an option: ");
     }
 

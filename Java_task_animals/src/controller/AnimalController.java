@@ -21,7 +21,7 @@ public void addAnimal() {
         String type = scanner.nextLine().toLowerCase();
         view.printMessage("Enter animal name: ");
         String name = scanner.nextLine();
-        view.printMessage("Enter animal birthdate (YYYY-MM-DD): ");
+        view.printMessage("Enter animal birthdate (DD-MM-YYYY): ");
         String birthdate = scanner.nextLine();
 
          Animals animal;
@@ -32,6 +32,7 @@ public void addAnimal() {
              case "horse" -> animal = new Horse();
              case "donkey" -> animal = new Donkey();
              case "camel" -> animal = new Camel();
+             case "pack animals" -> animal = new PackAnimals();
              default -> {
                  view.printMessage("Unknown animal type.");
                  return;
@@ -79,9 +80,9 @@ public void addAnimal() {
 
     public void showMenu() {
         while (true) {
-            view.printMenu(); // Предполагается, что метод printMenu() уже реализован в ConsoleView
+            view.printMenu();
             int option = scanner.nextInt();
-            scanner.nextLine();  // Очистить буфер
+            scanner.nextLine();
             switch (option) {
                 case 1:
                     addAnimal();
@@ -96,11 +97,32 @@ public void addAnimal() {
                     listAnimalsByBirthdate();
                     break;
                 case 5:
+                    showPetCount();
+                    break;
+                case 6:
+                    showPackAnimalsCount();
+                    break;
+                case 7:
+                    showTotalAnimalsCount();
+                case 8:
                     System.out.println("Exiting...");
-                    return;  // Завершает метод, выходя из цикла
+                    return;
                 default:
                     view.printMessage("Invalid option. Try again.");
             }
         }
     }
+
+    public void showPetCount() {
+        view.printMessage("Total number of pets created: " + Pets.getPetCount());
+    }
+
+    public void showPackAnimalsCount() {
+        view.printMessage("Total number of pack animals created: " + PackAnimals.getPackAnimalsCount());
+    }
+
+    public void showTotalAnimalsCount() {
+        view.printMessage("Total number of animals created: " + Animals.getTotalAnimalsCount());
+    }
+
 }
