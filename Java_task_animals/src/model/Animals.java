@@ -11,6 +11,16 @@ public class Animals {
     protected String breed;
     protected String owner;
 
+    private static int totalAnimalsCount = 0;
+
+    public Animals() {
+        totalAnimalsCount++;
+    }
+
+    public static int getTotalAnimalsCount() {
+        return totalAnimalsCount;
+    }
+
     protected List<String> commands = new ArrayList();
 
     public void sleep() {
